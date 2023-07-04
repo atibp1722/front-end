@@ -1,0 +1,35 @@
+body{
+	background-color: #111;
+	font-family: sans-serif, monospace;
+	color: orange;
+	text-transform: uppercase;
+	padding-top: 3em;
+	line-height: 65px;
+	perspective: 1000px;
+}
+.front, .back{
+	background-color: white;
+	border: solid 1px orange;
+	height: 200px;
+	width: 200px;
+}
+.cube{
+	width: 30%;
+	text-align: center;
+	margin: 0 auto;
+	height: 200px;
+	transform-style: preserve-3d;
+	transition: 1.55s;
+}
+.back{
+	transform: rotateX(-90deg) translateZ(-100px);
+}
+.front{
+	transform: translateZ(100px);
+}
+h1{
+	padding-top: 40px;
+}
+.cube:hover{
+	transform: rotateX(90deg);
+}

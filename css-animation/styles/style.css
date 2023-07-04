@@ -1,0 +1,452 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.parent-container{
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #434343 0%, black 100%);
+    height: 375px;
+    width: 33.33%;
+}
+.span-2-rows{
+    width: 66.66%;
+}
+.span-rows{
+    width: 100%;
+}
+.loader{
+    position: relative;
+}
+
+
+/* Animation effect #1 */
+.animation-first{
+    width: 200px;
+    height: 200px;
+    
+    animation: likeXP 2s ease infinite;
+}
+.animation-first span{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    animation: likeXPCircle 2s ease infinite;
+}
+.animation-first span:nth-child(1){
+    top: 0;
+    left: 0;
+    background-color: #3B77BC;
+    box-shadow: 0 0 25px #3B77BC;
+}
+.animation-first span:nth-child(2){
+    top: 0;
+    right: 0;
+    background-color: #DE482B;
+    box-shadow: 0 0 25px #DE482B;
+}
+.animation-first span:nth-child(3){
+    bottom: 0;
+    left: 0;
+    background-color: #81C046;
+    box-shadow: 0 0 25px #81C046;
+}
+.animation-first span:nth-child(4){
+    bottom: 0;
+    right: 0;
+    background-color: #FCCF03;
+    box-shadow: 0 0 25px #FCCF03;
+    
+}
+@keyframes likeXP{
+    50%{
+        width: 300px;
+        height: 300px;
+    }
+}
+@keyframes likeXPCircle{
+    50%{
+        border-radius: 50%;
+    }
+}
+
+/* Animation effect #2 */
+.animation-second{
+    width: 200px;
+    height: 100px;
+}
+.animation-second span{
+    width: 20px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    border-radius: 25px;
+}
+.animation-second span:nth-child(1){
+    left: 0;
+    background-color: violet;
+    animation: rainbow 2s ease infinite;
+    box-shadow: 0 0 15px violet;
+}
+.animation-second span:nth-child(2){
+    left: 25px;
+    background-color: indigo;
+    animation: rainbow 2s ease 0.15s infinite;
+    box-shadow: 0 0 15px indigo;
+}
+.animation-second span:nth-child(3){
+    left: 50px;
+    background-color: blue;
+    animation: rainbow 2s ease 0.3s infinite;
+    box-shadow: 0 0 15px blue;
+}
+.animation-second span:nth-child(4){
+    left: 75px;
+    background-color: green;
+    animation: rainbow 2s ease 0.45s infinite;
+    box-shadow: 0 0 15px green;
+}
+.animation-second span:nth-child(5){
+    left: 100px;
+    background-color: yellow;
+    animation: rainbow 2s ease 0.6s infinite;
+    box-shadow: 0 0 15px yellow;
+}
+.animation-second span:nth-child(6){
+    left: 125px;
+    background-color: orange;
+    animation: rainbow 2s ease 0.75s infinite;
+    box-shadow: 0 0 15px orange;
+}
+.animation-second span:nth-child(7){
+    left: 150px;
+    background-color: red;
+    animation: rainbow 2s ease 0.9s infinite;
+    box-shadow: 0 0 15px red;
+}
+.animation-second span:nth-child(8){
+    left: 175px;
+    background-color: white;
+    animation: rainbow 2s ease 1.05s infinite;
+    box-shadow: 0 0 15px white;
+}
+@keyframes rainbow {
+    0%,50%,100%{
+        transform: scale(1);
+    }
+    60%{
+        transform: scale(2);
+    }
+}
+
+/* Animation effect #3 */
+.animation-third{
+    width: 200px;
+    height: 200px;
+    animation: triangleAnm 3s ease infinite;
+}
+.animation-third::before{
+    position: absolute;
+    content:" ";
+    width: 0;
+    height: 0;
+    top: 0;
+    left: 0;
+    border-bottom: 100px solid white;
+    border-right: 100px solid transparent;
+    border-left: 100px solid transparent;
+    animation: triangleBefore 3s ease infinite;
+}
+.animation-third::after{
+    position: absolute;
+    content:" ";
+    width: 0;
+    height: 0;
+    bottom: 0;
+    left: 0;
+    border-top: 100px solid black;
+    border-right: 100px solid transparent;
+    border-left: 100px solid transparent;
+    animation: triangleAfter 3s ease infinite;
+}
+@keyframes triangleAnm {
+    0%{
+        transform: rotate(0deg);
+    }50%,100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes triangleBefore {
+    0%,50%{
+        transform: rotate(0deg);
+    }100%{
+        transform: rotate(-360deg);
+    }
+}
+@keyframes triangleAfter{
+    0%,50%{
+        transform: rotate(0deg);
+    }100%{
+        transform: rotate(-360deg);
+    }
+}
+
+/* Animation effect #4 */
+.animation-four{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 12px solid whitesmoke;
+    border-top-color: green;
+    border-left-color: green;
+    animation: circleToSquare 2.5s ease infinite;
+}
+@keyframes circleToSquare {
+    50%{
+        transform: rotate(360deg);
+        border-radius: 0;
+        width: 0;
+        height: 0;
+        border-width: 100px;
+    }
+}
+
+/* Animation eggect #5 */
+.animation-five{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 12px solid gold;
+    box-shadow: 0 0 20px goldenrod;
+}
+.animation-five::before{
+    width: 4px;
+    height: 70px;
+    position: absolute;
+    content:" ";
+    left: calc(50% - 2px);
+    top: 20px;
+    background-color: whitesmoke;
+    box-shadow: 0 0 15px white;
+    border-radius: 7px;
+    transform-origin: bottom;
+    animation: clock 3s ease infinite;
+}
+@keyframes clock {
+    0%{
+        transform: rotate(0deg);
+    }25%{
+        transform: rotate(90deg);
+    }50%{
+        transform: rotate(180deg);
+    }75%{
+        transform: rotate(270deg);
+    }100%{
+        transform: rotate(360deg);
+    }
+}
+
+/* Animation effect #6 */
+.animation-six{
+    width: 200px;
+    height: 200px;
+}
+.animation-six .layer{
+    position: absolute;
+    border: 1px solid transparent;
+    border-top-color: whitesmoke;
+    border-bottom-color: whitesmoke;  
+    border-radius: 50%;  
+    box-shadow: 0 0 25px red, 0 0 20px yellow, 0 0 5px green;
+}
+.animation-six .layer:nth-child(1){
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: waveFirst 3s ease infinite;
+}
+.animation-six .layer:nth-child(2){
+    top: 20px;
+    left: 20px;
+    width: 160px;
+    height: 160px;
+    animation: waveSecond 3s ease infinite;
+}
+.animation-six .layer:nth-child(3){
+    top: 40px;
+    left: 40px;
+    width: 120px;
+    height: 120px;
+    animation: waveThird 3s ease infinite;
+}
+@keyframes waveFirst {
+    0%{
+        transform: rotate(0deg);
+    }100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes waveSecond {
+    0%{
+        transform: rotate(240deg);
+    }100%{
+        transform: rotate(-120deg);
+    }
+}
+@keyframes waveThird {
+    0%{
+        transform: rotate(120deg);
+    }100%{
+        transform: rotate(480deg);
+    }
+}
+
+/* Animation effect #7 */
+.animation-seven{
+    width: 200px;
+    height: 200px;
+}
+.animation-seven::before{
+    position: absolute;
+    content: " ";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 25px salmon;
+    animation: blinkCircle 3s ease infinite;
+}
+.animation-seven::after{
+    position: absolute;
+    content: " ";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 25px seashell;
+    animation: blinkCircle 3s ease infinite 1.5s;
+    border-radius: 50%;
+}
+@keyframes blinkCircle{
+    0%,100%{
+        transform: scale(0);
+    }
+    50%{
+        transform: scale(1);
+    }
+}
+
+/* Animation effect #8 */
+.animation-eight{
+    width: 200px;
+    height: 200px;
+    animation: pacManMove 5s linear infinite;
+}
+.animation-eight::before{
+    position: absolute;
+    content: " ";
+    width: 200px;
+    height: 100px;
+    top: 0;
+    left: 0;
+    background-color: whitesmoke;
+    border-top-right-radius: 100px;
+    border-top-left-radius: 100px;
+    transform: rotate(-35deg);
+    animation: pacMan 0.7s ease infinite;
+}
+.animation-eight::after{
+    position: absolute;
+    content: " ";
+    width: 200px;
+    height: 100px;
+    bottom: 0;
+    left: 0;
+    background-color: whitesmoke;
+    border-bottom-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    transform: rotate(35deg);
+    animation: pacMan 0.7s ease infinite;
+}
+@keyframes pacMan {
+    50%{
+        transform: rotate(0deg);
+    }
+}
+@keyframes pacManMove {
+    0%{
+        left: -300px;
+        transform: rotateY(0deg);
+    }
+    48%{
+        left: 300px;
+        transform: rotateY(0deg);
+    }
+    52%{
+        left: 300px;
+        transform: rotateY(180deg);
+    }
+    98%{
+        left: -300px;
+        transform: rotateY(180deg);
+    }
+    100%{
+        left: -300px;
+    }
+}
+
+/* Animation effect #9 */
+.animation-nine{
+    box-sizing: border-box;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: burlywood;
+    border: 25px solid transparent;
+    border-top-color: darkslateblue;
+    border-bottom-color:darkslateblue;
+    box-shadow: 0 0 20px blanchedalmond, 0 0 10px yellow;
+    animation: wheel 1.5s linear infinite;
+}
+.animation-nine::before {
+    position: absolute;
+    content: " ";
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    left: calc(50% - 45px);
+    top: calc(50% - 45px);
+    background-color: black;
+    animation: wheelColor 5s ease infinite 1.5s;
+}
+@keyframes wheel {
+    0%{
+        transform: rotate(0deg);
+    }100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes wheelColor {
+    0%, 100%{
+        transform: scale(1);
+        background-color: white;
+        box-shadow: 0 0 15px wheat;
+    }25%{
+        background-color: red;
+        transform: translate(15px, 15px);
+        box-shadow: 0 0 10px red;
+    }
+    50%{
+        background-color: green;
+        transform: translate(15px, 15px);
+        box-shadow: 0 0 10px green;
+    }
+    75%{
+        background-color: blue;
+        transform: translate(15px, 15px);
+        box-shadow: 0 0 10px blue;
+    }
+}

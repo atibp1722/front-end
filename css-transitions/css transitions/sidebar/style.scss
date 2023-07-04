@@ -1,0 +1,55 @@
+@use 'mixins' as *;
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    user-select: none;
+}
+body{
+    height: 100vh;
+    background-color: #111;
+}
+/* Sidebar styling */
+.sidebar-wrapper{
+    width: 300px;
+    height: 100%;
+    background: linear-gradient(blue 2%, #000 100%);
+    @include forMobile{
+        width: 64px;
+    }
+    &-header{
+        display: flex;
+        padding: 16px 16px;
+        text-align: center;
+        font-size: 1.3em;
+        background: linear-gradient(#111 5%, #444 100%);
+        gap: 15px;
+        &-title{
+            color: white;
+            @include forMobile{
+                display: none;
+            }
+        }
+    }
+    &-list{
+        color: white;
+        margin-top: 12px;
+        &-item{
+            display: flex;
+            padding: 12px 18px;
+            transition: 0.5s all ease;
+            gap: 10px;
+            cursor: pointer;
+            color: white;
+            &-title{
+                margin-top: 2px;
+                @include forMobile{
+                    display: none;
+                }
+            }
+        }
+        &-item:hover{
+            background-color: dodgerblue;
+        }
+    }
+}

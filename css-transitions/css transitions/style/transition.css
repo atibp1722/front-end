@@ -1,0 +1,62 @@
+body{
+	background-color: #111;
+	font-family: sans-serif, cursive;
+	color: white;
+}
+.box-rotation{
+	height: 100px;
+	width: 100px;
+	background-color: seashell;
+	margin: 10px;
+	cursor: pointer;
+	display: flex;
+	text-align: center;
+	align-items: center;
+	font-size: 18px;
+	font-weight: 700;
+	padding: 10px;
+	color: black;
+}
+.box-rotation:hover{
+	color: white;
+	background-color: darkred;
+	border-radius: 50%;
+	transition: all 1s;
+	transform: rotateZ(360deg);
+} 
+.transPop{
+	width: 200px;
+	height: 240px;
+	font-size: 2.5rem;
+	padding: 20px;
+	transition-property: width, height, font-size, background-color, padding;
+	transition-duration: 1s;
+}
+.transProp:hover{
+	width: 300px;
+	height: 300px;
+	font-size: 24pt;
+	padding: 40px;
+	background-color: seagreen;
+}
+.container{
+	width: 90%;
+	margin: 30px auto 0;
+	border: 3px solid #333;
+	border-radius: 70px;
+	padding: 15px;
+	background-color: seashell;
+}
+.box{
+	width: 100px;
+	height: 100px;
+	border-radius: 50px;
+	background-color: lightcoral;
+	transition-timing-function: linear;
+	transition-duration: 1s;
+}
+.container:hover .box{
+	margin-left: 90%;
+	transition-delay: 1s;
+	background-color: lightskyblue;
+}

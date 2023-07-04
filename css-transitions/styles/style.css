@@ -1,0 +1,92 @@
+body{
+	background-color: white;
+	font-family: sans-serif, monospace;
+	color: white;
+}
+.slide{
+	background-color: darkblue;
+	width: 150px;
+	height: 150px;
+	margin-top: 50px;
+	animation: slide-box 4s infinite;
+}
+@keyframes slide-box{
+	from{
+		transform: translate(0px);
+	}
+	50%{
+		border-radius: 50%;
+		background-color: dodgerblue;
+	}
+	to{
+		background-color: skyblue;
+		transform: translate(500px) rotate(90deg);
+	}
+}
+img{
+	position: relative;
+	height: 150px;
+	width: 180px;
+	margin-top: 30px;
+	animation-name: boomerang, scale, rotate;
+	animation-duration: 3s, 3s, 3s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite, infinite, infinite;	
+}
+@keyframes boomerang{
+	0%{
+		left: 0px;
+		top: 150px;
+		animation-timing-function: ease-in;
+	}
+	10%{
+		left: 125px;
+		top: 50px;
+	}
+	50%{
+		left: 250px;
+		top: 150px;
+	}
+	80%{
+		left: 125px;
+		top: 250px;
+	}
+	100%{
+		left: 0px;
+		top: 150px;
+		animation-timing-function: ease-out;
+	}
+}
+@keyframes scale{
+	0%{
+		transform: scale(0.5);
+		width: 100px;
+	}
+	20%{
+		width: 150px;
+	}
+	50%{
+		transform: scale(2);
+		width: 250px;
+	}
+	80%{
+		width: 150px;
+	}
+	100%{
+		transform: scale(0.5);
+		width: 100px;
+	}
+}
+@keyframes rotate{
+	0%{
+		transform: rotate(0deg);
+		animation-timing-function: ease-in;
+	}
+	50%{
+		transform: rotate(360deg);
+	}
+	100%{
+		transform: rotate(720deg);
+		animation-timing-function: ease-out;
+	}
+}

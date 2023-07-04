@@ -1,0 +1,73 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-color: #111;
+	font-family: sans-serif, 'Geneva', monospace;
+	color: white;
+	animation: sky linear 5s forwards;
+}
+img{
+	position: relative;
+	top: 340px;
+}
+.sunset{
+	position: absolute;
+	background-color: orange;
+	height: 100px;
+	width: 100px;
+	border-radius: 50%;
+	top: 5%;
+	left: 20%;
+	box-shadow: 0 0 20px orange;
+	animation: sunset 3s ease-in forwards;
+}
+@keyframes sky{
+	0%{
+		background-color: #d50;
+	}
+	35%{
+		background-color: #c40;
+	}
+	55%{
+		background-color: #b20;
+	}
+	90%{
+		background-color: #002;
+	}
+	100%{
+		background-color: #001;
+	}
+}
+@keyframes sunset{
+	0%{
+		opacity: 1;
+	}
+	50%{
+		opacity: 1;
+	}
+	100%{
+		transform: translateY(450px);
+		opacity: 0;
+	}
+}
+.night{
+	position: absolute;
+	border-radius: 50%;
+	height: 100px;
+	width: 100px;
+	right: 10%;
+	bottom: 2%;
+	background-color: transparent;
+	box-shadow: -20px 10px 2px whitesmoke;
+	opacity: 0;
+	animation: night 5s ease-out forwards;
+	animation-delay: 2s;
+}
+@keyframes night{
+	100%{
+		transform: translateY(-450px);
+		opacity: 1;
+	}
+}

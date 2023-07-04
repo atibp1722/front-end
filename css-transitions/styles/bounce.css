@@ -1,0 +1,78 @@
+body{
+	background-color: #000;
+	font-family: sans-serif, monospace;
+	color: white;
+}
+img{
+	margin-top: 30px;
+	margin-left: 30px;
+	animation: infinite bounce-ball 3s linear;
+}
+@keyframes bounce-ball{
+	0%{
+		height: 100px;
+		width: 100px;
+		transform: translateX(0px);
+	}10%{
+		transform: translateY(10px);
+	}
+	20%{
+		transform: translateY(40px);
+	}
+	30%{
+		transform: translateY(100px);
+	}
+	40%{
+		transform: translateY(200px);
+	}
+	48%{
+		height: 100px;
+		width: 100px;
+	}
+	50%{
+		height: 100px;
+		width: 100px;
+		transform: translateY(400px);
+	}
+	52%{
+		height: 100px;
+		width: 100px;
+	}
+	60%{
+		transform: translateY(200px);
+	}
+	70%{
+		transform: translateY(100px);
+	}
+	80%{
+		transform: translateY(40px);
+	}
+	90%{
+		transform: translateY(10px);
+	}
+	100%{
+		transform: translateY(0px);
+	}
+}
+.loader{
+	margin-top: 410px;
+	border: 1px solid white;
+	width: 250px;
+	height: 50px;
+	margin-left: 30px;
+}
+.bar{
+	background-color: red;
+	width: 1px;
+	height: 50px;
+	animation: load 2s infinite;
+}
+@keyframes load{
+	50%{
+		background-color: yellow;
+	}
+	100%{
+		width: 250px;
+		background-color: green;
+	}
+}

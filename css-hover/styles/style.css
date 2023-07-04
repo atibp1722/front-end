@@ -1,0 +1,339 @@
+/* Basic page styling */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.element, .element-one, .element-two, .element-three, .element-four, .element-five,
+.element-six, .element-seven, .element-eight{
+    float: left;
+    width: 350px;
+    height: 350px;
+    position: relative;
+    margin: 40px 40px;
+}
+.front{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: all 0.7s ease;
+}
+.front img{
+    width: 100%;
+    height: 100%;
+}
+.back{
+    background: linear-gradient(to bottom left, blue, yellow, green);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 5px solid #222;
+    z-index: -2;
+    box-sizing: border-box;
+}
+.name{
+    font-weight: bold;
+    font-size: 1.7em;
+}
+.description{
+    margin: 20px 0px;
+    font-size: 20px;
+}
+.back-content{
+    padding: 0 50px;
+}
+.icons .fa{
+    font-weight: normal;
+    font-size: 30px;
+    margin: 0 5px;
+}
+
+/* Hover effect #1 */
+.element .back-content{
+    transform: scale(0);
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+.element:hover .front{
+    width: 100px;
+    height: 100px;
+    left: calc(100% - 50px);
+    top:calc(50% - 50px);
+}
+.element:hover .front img{
+    border-radius: 50px;
+    box-shadow: 0 0 0 5px lightgoldenrodyellow;
+}
+.element:hover .back-content{
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+/* Hover effect #2 */
+.element-one .back-content{
+    opacity: 0;
+    transition: all 1s ease;
+    transform: translateY(-100px);
+}
+.element-one:hover .back-content{
+    opacity: 1;
+    transform: translateY(0px);
+}
+.element-one:hover .front{
+    opacity: 0;
+    top: -100%;
+}
+.element-one .back::before{
+    position: absolute;
+    content:" ";
+    top: 200px;
+    bottom: 200px;
+    right: 50px;
+    left: 50px;
+    border-right: 2px solid whitesmoke;
+    border-left: 2px solid whitesmoke;
+    transition: all 1s ease-in;
+}
+.element-one .back::after{
+    position: absolute;
+    content:" ";
+    top: 50px;
+    bottom: 50px;
+    right: 200px;
+    left: 200px;
+    border-top: 2px solid whitesmoke;
+    border-bottom: 2px solid whitesmoke;
+    transition: all 1s ease-out;
+}
+.element-one:hover .back::before{
+    top: 30px;
+    bottom: 30px;
+}
+.element-one:hover .back::after{
+    right: 30px;
+    left: 30px;
+}
+
+/* Hover effect #3 */
+.element-two .front{
+    opacity: 0;
+}
+.element-two .contain{
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: black;
+    z-index: -3;
+    transition: all 0.5s ease;
+    transform: scale(0,1);
+
+}
+.element-two .contain:nth-child(2){
+    left: calc(25%);
+}
+.element-two .contain:nth-child(3){
+    left: calc(50%);
+}
+.element-two .contain:nth-child(4){
+    left: calc(75%);
+}
+
+.element-two:hover .contain{
+    transform: scale(1,1);
+}
+.element-two:hover .back-content{
+    transition: all 1.7s linear;
+    transform: scale(1.2);
+    color: whitesmoke;
+}
+
+/* Hover ffect #4 */
+.element-three:hover .front{
+    opacity: 0;
+    transform: translateX(-350px)rotate(720deg);
+    transition: all 0.7s ease-in;
+}
+.element-three .back::before{
+    position: absolute;
+    content: " ";
+    border-right: 2px solid wheat;
+    border-left: 2px solid wheat;
+    top: 200px;
+    bottom: 200px;
+    right: 40px;
+    left: 40px;
+    transition: all 1s ease-out;
+}
+.element-three .back::after{
+    position: absolute;
+    content: " ";
+    border-top: 2px solid wheat;
+    border-bottom: 2px solid wheat;
+    top: 40px;
+    bottom: 40px;
+    right: 200px;
+    left: 200px;
+    transition: all 1s ease-in;
+}   
+.element-three:hover .back::before{
+    top: 80px;
+    bottom: 80px;
+}
+.element-three:hover .back::after{
+    right: 80px;
+    left: 80px;
+}
+.element-three .back-content{
+    transform: translateX(-50px);
+    opacity: 0;
+}
+.element-three:hover .back-content{
+    transform: translateY(0px);
+    opacity: 1;
+    transition: all 0.7s linear;
+}
+
+/* Hover effect #5 */
+.element-four{
+    overflow: hidden;
+}
+.element-four .front{
+    transform: skewX(0deg);
+    opacity: 1;
+    transition: transform 0.5s ease, left 1s ease 0.5s, opacity 0.5s ease 0.5s;
+}
+.element-four:hover .front{
+    opacity: 0;
+    left: -100%;
+    transform: skewX(-30deg);
+}
+.element-four .back-content{
+    transform: scale(0);
+    transition: all 0.7s linear;
+    opacity: 0;
+}
+.element-four:hover .back-content{
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* Hover effect 6 */
+.element-five:hover .front{
+    transform: scale(0.3);
+    top: 100px;
+    box-shadow: 0 0 40px 5px coral;
+}
+.element-five .back-content{
+    transition: all 0.5s ease;
+}
+.element-five:hover .back-content{
+    transform: translateY(-50px);
+}
+
+/* Hover effect #7 */
+.element-six .back{
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    background:linear-gradient(to bottom right, indigo, violet, purple)
+}
+.element-six:hover .front{
+    transform: translateY(-100%)rotateX(180deg);
+    opacity: 0;
+}
+.element-six .back-content .name{
+    transform: translateY(-50px);
+    transition: all 0.7s linear;
+    opacity: 0;
+}
+.element-six .back-content .description{
+    opacity: 0;
+    transition: all 1s ease-in-out 0.2s;
+}
+.element-six .back-content .icons{
+    transform: translateY(50px);
+    transition: all 0.7s linear;
+    opacity: 0;
+}
+.element-six:hover .back-content .name{
+    transform: translateY(0px);
+    opacity: 1;
+}
+.element-six:hover .back-content .icons{
+    transform: translateY(0px);
+    opacity: 1;
+}
+.element-six:hover .back-content .description{
+    opacity: 1;
+}
+
+/* Hover effect #8 */
+.element-seven .front{
+    transform: rotateY(0deg);
+    transform-origin: left;
+}
+.element-seven:hover .front{
+    transform: rotateY(180deg);
+}
+.element-seven .back-content{
+    transform: scale(0);
+    opacity: 0;
+    transition: all 0.5s ease-in 0.1s;
+}
+.element-seven:hover .back-content{
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* Hover effect #9 */
+.element-eight:hover .front{
+    opacity: 0;
+}
+.element-eight .back::before{
+    position: absolute;
+    content: " ";
+    width: 0px;
+    height: 0px;
+    top: 40px;
+    right: 40px;
+    border-top: 2px solid whitesmoke;
+    border-right: 2px solid whitesmoke;
+    transition: all 2s ease;
+}
+.element-eight .back::after{
+    position: absolute;
+    content: " ";
+    width: 0px;
+    height: 0px;
+    bottom: 40px;
+    left: 40px;
+    border-bottom: 2px solid whitesmoke;
+    border-left: 2px solid whitesmoke;
+    transition: all 2s ease;
+}
+.element-eight:hover .back::before{
+    width: 100px;
+    height: 100px;
+}
+.element-eight:hover .back::after{
+    width: 100px;
+    height: 100px;
+}
+.element-eight .back-content{
+    transform: translateY(-50px);
+    transition: all 1s ease;
+    opacity: 0;
+}
+.element-eight:hover .back-content{
+    transform: translateY(0px) scale(1.1);
+    opacity: 1;
+}

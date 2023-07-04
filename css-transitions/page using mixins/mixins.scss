@@ -1,0 +1,26 @@
+@mixin button ($dirs, $color1, $color2)
+{
+    text-decoration: none;
+    background: linear-gradient($dirs, $color1, $color2);
+    color: $bdyClr;
+    padding: 15px 64px;
+    border-radius: 30px;
+    
+}
+
+@mixin center
+{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+@mixin gradientText($direction, $clr1, $clr2)
+{
+    background:linear-gradient($direction, $clr1, $clr2);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
